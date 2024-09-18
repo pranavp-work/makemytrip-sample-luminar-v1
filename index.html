@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Hotels</title>
+    <!-- setting makemytrip logo -->
+    <link rel="icon" href="assets/logo/makemytrip-logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- style.css -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="assets/logo/makemytrip-navbar-logo.avif" alt="MakeMyTrip Logo">
+        </a>
+
+        <!-- Right Side Links -->
+        <ul class="navbar-nav ms-auto">
+            <!-- List Your Property -->
+            <li class="nav-item">
+                <a class="nav-link btn-link" href="#">List Your Property</a>
+            </li>
+
+            <!-- myBiz Button -->
+            <li class="nav-item">
+                <a class="nav-link btn-myBiz" href="#">Introducing myBiz</a>
+            </li>
+
+            <!-- My Trips -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">My Trips</a>
+            </li>
+
+            <!-- Login Button -->
+            <li class="nav-item">
+                <a class="nav-link btn-login" href="#">Login or Create Account</a>
+            </li>
+
+            <!-- Dropdown for Language & Currency -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    IN | ENG | INR
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">IN | ENG | INR</a></li>
+                    <li><a class="dropdown-item" href="#">US | ENG | USD</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container mt-5">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 booking-form">
+                <h3 class="text-center mb-4">Flight Booking</h3>
+
+                <!-- Tabs for Flights, Hotels, etc. -->
+                <ul class="nav nav-tabs mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Holiday Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cabs</a>
+                    </li>
+                </ul>
+
+                <!-- Form -->
+                <form>
+                    <div class="row">
+                        <!-- From -->
+                        <div class="col-md-6 mb-3">
+                            <label for="from" class="form-label">From</label>
+                            <input type="text" class="form-control" id="from" placeholder="Delhi (DEL)" required>
+                        </div>
+
+                        <!-- To -->
+                        <div class="col-md-6 mb-3">
+                            <label for="to" class="form-label">To</label>
+                            <input type="text" class="form-control" id="to" placeholder="Bengaluru (BLR)" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Departure -->
+                        <div class="col-md-6 mb-3">
+                            <label for="departure" class="form-label">Departure</label>
+                            <input type="date" class="form-control" id="departure" required>
+                        </div>
+
+                        <!-- Return -->
+                        <div class="col-md-6 mb-3">
+                            <label for="return" class="form-label">Return</label>
+                            <input type="date" class="form-control" id="return">
+                        </div>
+                    </div>
+
+                    <!-- Traveller and Class -->
+                    <div class="mb-3">
+                        <label for="travellerClass" class="form-label">Travellers & Class</label>
+                        <select class="form-select" id="travellerClass">
+                            <option selected>1 Traveller, Economy</option>
+                            <option value="1">1 Traveller, Premium Economy</option>
+                            <option value="2">2 Travellers, Economy</option>
+                        </select>
+                    </div>
+
+                    <!-- Special fare options -->
+                    <div class="special-fare-options">
+                        <label class="form-label">Select a special fare</label>
+                        <div class="btn-group" role="group" aria-label="Special Fare Options">
+                            <input type="radio" class="btn-check" name="fareOptions" id="regular" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="regular">Regular</label>
+
+                            <input type="radio" class="btn-check" name="fareOptions" id="student" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="student">Student</label>
+
+                            <input type="radio" class="btn-check" name="fareOptions" id="seniorCitizen" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="seniorCitizen">Senior Citizen</label>
+
+                            <input type="radio" class="btn-check" name="fareOptions" id="armedForces" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="armedForces">Armed Forces</label>
+
+                            <input type="radio" class="btn-check" name="fareOptions" id="doctorNurses" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="doctorNurses">Doctor and Nurses</label>
+                        </div>
+                    </div>
+
+                    <!-- Search Button -->
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-search">SEARCH</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="offers-section py-5 bg-light">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0">Offers</h2>
+            <a href="#" class="btn btn-link text-decoration-none">VIEW ALL &rarr;</a>
+          </div>
+          <div class="row">
+            <!-- Offer 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <img src="https://promos.makemytrip.com/images//Desktop-TKS-Common-11Sep.jpg?im=Resize=(134,134)" class="card-img-top" alt="Offer Image">
+                <div class="card-body">
+                  <h5 class="card-title">For Your Festive Trips:</h5>
+                  <p class="card-text">Get up to 45% OFF* on flights, stays, holiday packages, buses, cabs & trains!</p>
+                  <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- Offer 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <img src="https://promos.makemytrip.com/images//DH-Desktop-TKS-12Sep.jpg?im=Resize=(134,134)" class="card-img-top" alt="Offer Image">
+                <div class="card-body">
+                  <h5 class="card-title">Grab Up to 45% OFF*</h5>
+                  <p class="card-text">On hotels in India</p>
+                  <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- Offer 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <img src="https://promos.makemytrip.com/images//Europe-Desktop-TKS-12Sep.jpg?im=Resize=(134,134)" class="card-img-top" alt="Offer Image">
+                <div class="card-body">
+                  <h5 class="card-title">Grab up to 20% OFF*</h5>
+                  <p class="card-text">On domestic flights</p>
+                  <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- Offer 4 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <img src="https://promos.makemytrip.com/images//DF-Desktop-TKS-12Sep.jpg?im=Resize=(134,134)" class="card-img-top" alt="Offer Image">
+                <div class="card-body">
+                  <h5 class="card-title">Grab up to ₹30,000 OFF*</h5>
+                  <p class="card-text">On flights to/from USA and Canada</p>
+                  <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- Offer 5 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <img src="https://promos.makemytrip.com/images//US-Desktop-TKS-12Sep.jpg?im=Resize=(134,134)" class="card-img-top" alt="Offer Image">
+                <div class="card-body">
+                  <h5 class="card-title">Grab up to ₹30,000 OFF*</h5>
+                  <p class="card-text">On flights to/from USA and Canada</p>
+                  <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- Offer 6 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <img src="https://promos.makemytrip.com/images//SouthEastAsia-Desktop-TKS-12Sep.jpg?im=Resize=(134,134)" class="card-img-top" alt="Offer Image">
+                <div class="card-body">
+                  <h5 class="card-title">Grab up to ₹30,000 OFF*</h5>
+                  <p class="card-text">On flights to/from Paris, Tokyo, and more</p>
+                  <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hotel-stores-section py-5 bg-light">
+        <div class="container">
+          <div class="mb-4">
+            <h2>Flagship Hotel Stores on MakeMyTrip</h2>
+          </div>
+          <div class="row mb-4">
+            <!-- Hotel 1 -->
+            <div class="col-md-4 mb-3">
+              <div class="card border-0">
+                <img src="https://platforms.makemytrip.com/contents/5b28b4a9-d58d-4984-b60b-c0410a572f00" class="card-img-top rounded" alt="Lemon Tree Hotels">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Lemon Tree Hotels</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 2 -->
+            <div class="col-md-4 mb-3">
+              <div class="card border-0">
+                <img src="https://platforms.makemytrip.com/contents/022d9c0e-ae81-4ab2-8b8e-948d76eb421d" class="card-img-top rounded" alt="WelcomHeritage">
+                <div class="card-body text-center">
+                  <h5 class="card-title">WelcomHeritage</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 3 -->
+            <div class="col-md-4 mb-3">
+              <div class="card border-0">
+                <img src="https://platforms.makemytrip.com/contents/63ef6026-1674-4e06-91f8-77d868e15bcc" class="card-img-top rounded" alt="Wyndham Hotels & Resorts">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Wyndham Hotels & Resorts</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Additional Offers Section -->
+          <div class="row text-center">
+            <div class="col-md-4">
+              <div class="info-box">
+                <img src="https://promos.makemytrip.com/Growth/Images/B2C/Uncompressed/Artboard_travRep.png" alt="Icon" class="mb-3" height="50px" width="50px">
+                <p>Check out our Indian Travel Trends Report. Our trends report 2023-24 is out now. Read on for top travel insights.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info-box">
+                <img src="https://promos.makemytrip.com/Growth/Images/B2C/xhdpi/ic_whatsnew_flight.png" alt="Icon" class="mb-3" height="50px" width="50px">
+                <p>Book Flights with Voice Chat! Code: <strong>MMTMYRA</strong> will be auto-applied for EXTRA discounts!</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info-box">
+                <img src="https://promos.makemytrip.com/images/CDN_upload/indiannessapphome2.png" alt="Icon" class="mb-3" height="50px" width="50px">
+                <p>Finding Indian Food just got easier! Use newly launched filters to find Indian food during International travel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-light">
+      <div class="container">
+        <h2>Handpicked Collections for You</h2>
+        <div id="collectionCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Carousel Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#collectionCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#collectionCarousel" data-slide-to="1"></li>
+            </ul>
+    
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="https://hblimg.mmtcdn.com/content/hubble/img/delhi_hotels_tiow/mmt/activities/m_Le%20ROI%20Floating%20Huts_Eco%20Rooms_Tehri_Uttarakhand_l_550_821.jpg?im=Resize=(400,462)" class="card-img-top" alt="Stay in Delhi">
+                                <div class="card-body">
+                                    <span class="badge badge-primary">TOP 8</span>
+                                    <h5 class="card-title">Stays in & Around Delhi for a Weekend Getaway</h5>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card 2 -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="https://hblimg.mmtcdn.com/content/hubble/img/seo_img/mmt/activities/m_Radisson_blu_image_seo_l_550_821.jpg?im=Resize=(400,462)" class="card-img-top" alt="Stay in Mumbai">
+                                <div class="card-body">
+                                    <span class="badge badge-primary">TOP 8</span>
+                                    <h5 class="card-title">Stays in & Around Mumbai for a Weekend Getaway</h5>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card 3 -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="https://hblimg.mmtcdn.com/content/hubble/img/collections/m_beach44_p_540_417.jpg?im=Resize=(400,462)" class="card-img-top" alt="Stay in Bangalore">
+                                <div class="card-body">
+                                    <span class="badge badge-primary">TOP 9</span>
+                                    <h5 class="card-title">Stays in & Around Bangalore for a Weekend Getaway</h5>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card 4 -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="https://hblimg.mmtcdn.com/content/hubble/img/collections/m_weekend44_p_540_417.jpg?im=Resize=(400,462)" class="card-img-top" alt="Beach Destinations">
+                                <div class="card-body">
+                                    <span class="badge badge-primary">TOP 11</span>
+                                    <h5 class="card-title">Beach Destinations</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- <div class="carousel-item">
+                    <div class="row"> -->
+                        <!-- Card 5 -->
+                        <!-- <div class="col-md-3">
+                            <div class="card">
+                                <img src="https://imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/bg1.jpg" class="card-img-top" alt="Weekend Getaways">
+                                <div class="card-body">
+                                    <span class="badge badge-primary">TOP 11</span>
+                                    <h5 class="card-title">Weekend Getaways</h5>
+                                </div>
+                            </div>
+                        </div> -->
+    
+                        <!-- Card 6 -->
+                        <!-- <div class="col-md-3">
+                            <div class="card">
+                                <img src="image6.jpg" class="card-img-top" alt="Hill Stations">
+                                <div class="card-body">
+                                    <span class="badge badge-primary">TOP 11</span>
+                                    <h5 class="card-title">Hill Stations</h5>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- </div>
+                </div> -->
+            </div>
+    
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#collectionCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#collectionCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container">
+          <h2>Unlock Lesser-Known Wonders of India</h2>
+          <div id="collectionCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Carousel Indicators -->
+              <ul class="carousel-indicators">
+                  <li data-target="#collectionCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#collectionCarousel" data-slide-to="1"></li>
+              </ul>
+      
+              <!-- Carousel Inner -->
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="row">
+                          <!-- Card 1 -->
+                          <div class="col-md-3">
+                              <div class="card">
+                                  <img src="https://hblimg.mmtcdn.com//content/hubble/img/saputara/mmt/destination/m_destination-saputara-landscape_l_400_640.jpg?im=Resize=(400,462)" class="card-img-top" alt="Stay in Delhi">
+                                  <div class="card-body">
+                                      <span class="badge badge-primary">TOP 8</span>
+                                      <h5 class="card-title">Stays in & Around Delhi for a Weekend Getaway</h5>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <!-- Card 2 -->
+                          <div class="col-md-3">
+                              <div class="card">
+                                  <img src="https://hblimg.mmtcdn.com//content/hubble/img/narkanda/mmt/destination/m_Narkanda_l_372_902.jpg?im=Resize=(400,462)" class="card-img-top" alt="Stay in Mumbai">
+                                  <div class="card-body">
+                                      <span class="badge badge-primary">TOP 8</span>
+                                      <h5 class="card-title">Stays in & Around Mumbai for a Weekend Getaway</h5>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <!-- Card 3 -->
+                          <div class="col-md-3">
+                              <div class="card">
+                                  <img src="https://hblimg.mmtcdn.com//content/hubble/img/yercaud/mmt/destination/m_destination-yercaud-landscape_l_400_640.jpg?im=Resize=(400,462)" class="card-img-top" alt="Stay in Bangalore">
+                                  <div class="card-body">
+                                      <span class="badge badge-primary">TOP 9</span>
+                                      <h5 class="card-title">Stays in & Around Bangalore for a Weekend Getaway</h5>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <!-- Card 4 -->
+                          <div class="col-md-3">
+                              <div class="card">
+                                  <img src="https://hblimg.mmtcdn.com//content/hubble/img/dooars/mmt/destination/m_Dooars_l_457_685.jpg?im=Resize=(400,462)" class="card-img-top" alt="Beach Destinations">
+                                  <div class="card-body">
+                                      <span class="badge badge-primary">TOP 11</span>
+                                      <h5 class="card-title">Beach Destinations</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="carousel-item">
+                      <div class="row">
+                          <!-- Card 5 -->
+                          <div class="col-md-3">
+                              <div class="card">
+                                  <img src="image5.jpg" class="card-img-top" alt="Weekend Getaways">
+                                  <div class="card-body">
+                                      <span class="badge badge-primary">TOP 11</span>
+                                      <h5 class="card-title">Weekend Getaways</h5>
+                                  </div>
+                              </div>
+                          </div>
+      
+                          <!-- Card 6 -->
+                          <div class="col-md-3">
+                              <div class="card">
+                                  <img src="image6.jpg" class="card-img-top" alt="Hill Stations">
+                                  <div class="card-body">
+                                      <span class="badge badge-primary">TOP 11</span>
+                                      <h5 class="card-title">Hill Stations</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Carousel Controls -->
+              <a class="carousel-control-prev" href="#collectionCarousel" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#collectionCarousel" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+              </a>
+          </div>
+      </div>
+      </section>
+
+      <!-- Corporate Travel Section -->
+       <section class="bg-light">
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h6>CORPORATE TRAVEL</h6>
+                        <p>
+                            Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, 
+                            GST Invoice for Bus, Corporate myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, 
+                            myBiz for Small Business, Free cancellation on International Flights
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Information Section (Why MakeMyTrip, Booking Flights, Domestic Flights) -->
+<div class="container-fluid py-5 info-section">
+    <div class="row">
+        <div class="col-md-4">
+            <h5>Why MakeMyTrip?</h5>
+            <p>
+                Established in 2000, MakeMyTrip has positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless 
+                online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday packages through our desktop site or mobile app can 
+                be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h5>Booking Flights with MakeMyTrip</h5>
+            <p>
+                At MakeMyTrip, you can find the best deals and cheap air tickets to any place you want by booking your tickets on our website or app. MakeMyTrip helps you book flight 
+                tickets that are affordable and customized to your convenience. We also have a 24/7 dedicated helpline to cater to our customer’s queries and concerns.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h5>Domestic Flights with MakeMyTrip</h5>
+            <p>
+                MakeMyTrip is India's leading player for flight bookings. With the cheapest fare guarantee, experience great value at the lowest price. Instant notifications ensure 
+                current flight status, fare drops, instant refunds, and rebook options, along with price comparisons and many more interesting features.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>© 2024 MAKEMYTRIP PVT. LTD.</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <p>Country: <a href="#" class="text-white">India</a> <a href="#" class="text-white">USA</a> <a href="#" class="text-white">UAE</a></p>
+            </div>
+        </div>
+        <div class="row text-center mt-3">
+            <div class="col-12">
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
